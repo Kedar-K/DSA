@@ -37,6 +37,12 @@ class LinkedList:
         nodes.append('None')
         return '->'.join(nodes)
 
+    def __iter__(self):
+        node = self.head
+        while node is not None:
+            yield node
+            node - node.next
+
 ll = LinkedList(["1","2","3","4","5"])
 print(ll)
 
