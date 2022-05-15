@@ -38,10 +38,13 @@ class LinkedList:
         return '->'.join(nodes)
 
     def __iter__(self):
+        '''
+        used for iterating through the ll
+        '''
         node = self.head
         while node is not None:
-            yield node
-            node - node.next
+            yield node          # for understanding yield = https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do
+            node = node.next
 
 ll = LinkedList(["1","2","3","4","5"])
 print(ll)
