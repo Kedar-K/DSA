@@ -46,7 +46,32 @@ class LinkedList:
             yield node          # for understanding yield = https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do
             node = node.next
 
+    def add_to_start(self, node):
+        '''
+        Add element to the begining of the Linked List
+        '''
+        node.next = self.head
+        self.head = node
+
+    def add_to_end(self, node):
+        '''
+        Add element to the end of list
+        '''
+        if self.head is None:
+            self.head = node
+        
+        for current_node in self:
+            pass
+        
+        current_node.next = node
+
+
 ll = LinkedList(["1","2","3","4","5"])
 print(ll)
-
+first_node = Node("0")
+ll.add_to_start(first_node)
+print(ll)
+last_node = Node("6")
+ll.add_to_end(last_node)
+print(ll)
 
